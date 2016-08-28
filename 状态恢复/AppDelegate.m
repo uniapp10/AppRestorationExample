@@ -24,7 +24,7 @@
 - (BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder{
     return YES;
 }
-//应用恢复
+//应用恢复,在该代理方法中创建只声明了重用标识,未声明重用类型的对象
 - (UIViewController *)application:(UIApplication *)application viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder{
     UIViewController *vc = [[ViewController alloc] init];
     UIViewController *nav = [[ZDNavigationController alloc] initWithRootViewController:vc];
@@ -40,7 +40,7 @@
         ViewController *vc = [[ViewController alloc] init];
         vc.view.backgroundColor = [UIColor greenColor];
         ZDNavigationController *nav = [[ZDNavigationController alloc] initWithRootViewController:vc];
-        //容器视图不需要设置恢复类
+        //容器视图没有设置恢复类时,在代理方法中实现
 //        nav.restorationClass = [ZDNavigationController class];
         //设置恢复标识
         nav.restorationIdentifier = NSStringFromClass([ZDNavigationController class]);
@@ -49,7 +49,7 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
-
+//是否启用状态保存
 - (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder{
     return YES;
 }

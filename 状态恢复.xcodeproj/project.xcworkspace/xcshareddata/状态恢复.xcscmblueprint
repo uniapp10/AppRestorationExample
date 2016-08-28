@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "852A79BC0DD573A576352672D6C196AC5CE754CD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "852A79BC0DD573A576352672D6C196AC5CE754CD" : 0,
+    "B68B1C5B1573AEA2C8F8E4ADE6B36DA86059859B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "08A95047-C158-4C73-A778-8EF835BAD6B5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "852A79BC0DD573A576352672D6C196AC5CE754CD" : "reStorationDemo\/",
+    "B68B1C5B1573AEA2C8F8E4ADE6B36DA86059859B" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "状态恢复",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "状态恢复.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zhudong10\/AppRestorationExample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "852A79BC0DD573A576352672D6C196AC5CE754CD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zhudong10\/ZDZhiBoTableView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B68B1C5B1573AEA2C8F8E4ADE6B36DA86059859B"
+    }
+  ]
+}
