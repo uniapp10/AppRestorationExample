@@ -26,12 +26,19 @@
 }
 //应用恢复,在该代理方法中创建只声明了重用标识,未声明重用类型的对象
 - (UIViewController *)application:(UIApplication *)application viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder{
-    UIViewController *vc = [[ViewController alloc] init];
-    UIViewController *nav = [[ZDNavigationController alloc] initWithRootViewController:vc];
+    
+
     //identifierComponents的最后一个元素就是其恢复标识
-    nav.restorationIdentifier = [identifierComponents lastObject];
-    if ([identifierComponents count] == 1) {
-        self.window.rootViewController = nav;
+    UIViewController *vc = [[ViewController alloc] init];
+    ZDNavigationController *nav = [[ZDNavigationController alloc] initWithRootViewController:vc];
+    nav.restorationIdentifier = [identifierComponents firstObject];
+    self.window.rootViewController = nav;
+    if ([identifierComponents count] > 1) {
+        for (int i = 0; i < identifierComponents.count; i++) {
+            Class vc = NSClassFromString([identifierComponents lastObject]);
+            ViewController *vc1 = [[vc alloc] init];
+            [nav pushViewController:vc1 animated:true];
+        }
     }
     return nav;
 }
@@ -39,9 +46,8 @@
     if (!self.window.rootViewController) {
         ViewController *vc = [[ViewController alloc] init];
         vc.view.backgroundColor = [UIColor greenColor];
+        vc.restorationIdentifier = NSStringFromClass([ViewController class]);
         ZDNavigationController *nav = [[ZDNavigationController alloc] initWithRootViewController:vc];
-        //容器视图没有设置恢复类时,在代理方法中实现
-//        nav.restorationClass = [ZDNavigationController class];
         //设置恢复标识
         nav.restorationIdentifier = NSStringFromClass([ZDNavigationController class]);
         self.window.rootViewController = nav;

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ZDSecondController.h"
 
 @interface ViewController ()<UIViewControllerRestoration>
 @property (nonatomic,copy) NSString *name;
@@ -37,17 +38,17 @@
 //为恢复状态属性编码
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder{
     //记录输入的姓名
+    [super encodeRestorableStateWithCoder:coder];
     [coder encodeObject:self.nameT.text forKey:@"name"];
     //记录输入的年龄
     [coder encodeObject:self.ageT.text forKey:@"age"];
-    [super encodeRestorableStateWithCoder:coder];
 }
 //为恢复状态属性解码(在viewDidLoad调用后,调用该方法)
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder{
     //将上次输入的姓名和年龄取出,赋值
+    [super decodeRestorableStateWithCoder:coder];
     self.nameL.text = [coder decodeObjectForKey:@"name"];
     self.ageL.text = [coder decodeObjectForKey:@"age"];
-    [super decodeRestorableStateWithCoder:coder];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -68,6 +69,17 @@
     self.ageT = ageT;
     [self.view addSubview:nameT];
     [self.view addSubview:ageT];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(100, 300, 150, 50);
+    btn.backgroundColor = [UIColor redColor];
+    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+}
+
+- (void)btnClick {
+    ZDSecondController *secondC = [[ZDSecondController alloc] init];
+    [self.navigationController pushViewController:secondC animated:true];
 }
 
 - (void)didReceiveMemoryWarning {

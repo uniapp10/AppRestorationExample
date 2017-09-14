@@ -13,6 +13,7 @@
 		539536921D72C744001E4910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539536911D72C744001E4910 /* Assets.xcassets */; };
 		539536951D72C744001E4910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539536931D72C744001E4910 /* LaunchScreen.storyboard */; };
 		5395369E1D72C93C001E4910 /* ZDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5395369D1D72C93C001E4910 /* ZDNavigationController.m */; };
+		FC4142EB1F6A18470095A15A /* ZDSecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4142EA1F6A18470095A15A /* ZDSecondController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		539536961D72C744001E4910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5395369C1D72C93C001E4910 /* ZDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDNavigationController.h; sourceTree = "<group>"; };
 		5395369D1D72C93C001E4910 /* ZDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDNavigationController.m; sourceTree = "<group>"; };
+		FC4142E91F6A18470095A15A /* ZDSecondController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDSecondController.h; sourceTree = "<group>"; };
+		FC4142EA1F6A18470095A15A /* ZDSecondController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDSecondController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				5395369D1D72C93C001E4910 /* ZDNavigationController.m */,
 				5395368B1D72C744001E4910 /* ViewController.h */,
 				5395368C1D72C744001E4910 /* ViewController.m */,
+				FC4142E91F6A18470095A15A /* ZDSecondController.h */,
+				FC4142EA1F6A18470095A15A /* ZDSecondController.m */,
 				539536911D72C744001E4910 /* Assets.xcassets */,
 				539536931D72C744001E4910 /* LaunchScreen.storyboard */,
 				539536961D72C744001E4910 /* Info.plist */,
@@ -113,6 +118,7 @@
 				TargetAttributes = {
 					539536811D72C744001E4910 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 3GE4G86BZ9;
 					};
 				};
 			};
@@ -155,6 +161,7 @@
 				5395369E1D72C93C001E4910 /* ZDNavigationController.m in Sources */,
 				5395368A1D72C744001E4910 /* AppDelegate.m in Sources */,
 				539536871D72C744001E4910 /* main.m in Sources */,
+				FC4142EB1F6A18470095A15A /* ZDSecondController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +265,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3GE4G86BZ9;
 				INFOPLIST_FILE = "状态恢复/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.91guoxin.www.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -269,7 +278,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3GE4G86BZ9;
 				INFOPLIST_FILE = "状态恢复/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.91guoxin.www.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,6 +306,7 @@
 				5395369B1D72C744001E4910 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
